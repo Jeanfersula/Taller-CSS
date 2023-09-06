@@ -1,10 +1,13 @@
 /*main setting*/
 :root {
     --primary-color: #4f4aa6;
-    --secondary-color: #48ca95;
+    --secondary-color: #51FE44;
+    --btn-color: #48ca95;
     --bg-color: #f7f7f7;
     --ligth-color: #ffff;
+    --products-btn: #090807;
 
+    --section-product-title: poppins-bold;
     --header-text-title: poppins-bold;
     --text-font: poppins;
     --menu-font: poppins-bold
@@ -31,7 +34,9 @@
     font-family: poppins-extrabold;
     src: url(fonts/Poppins-ExtraBold.ttf);
 }
- /* header*/
+
+
+/* header*/
 header {
     background-image: url(images/banner.jpg);
     background-size: cover;
@@ -66,7 +71,10 @@ nav ul li a {
 
 .selected {
     color: var(--secondary-color);
+}
 
+a:hover {
+    color: var(--secondary-color);
 }
 
 .header-img {
@@ -107,14 +115,17 @@ nav ul li a {
     padding: 15px 60px;
     border: 2px solid var(--ligth-color);
     margin: 0px 5px;
-    
+
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
+    color: var(--ligth-color);
+    background-color: var(--btn-color);
+    border: 2px solid var(--btn-color);
+    transition: all 2s;
 }
-.menu-mobile{
+
+.menu-mobile {
     display: none;
 }
 
@@ -122,37 +133,160 @@ nav ul li a {
     .menu-mobile {
         display: flex;
     }
+
     .menu-screen {
         display: none;
     }
 }
+
 @media (max-width: 1300px) {
     .header-content {
         flex-direction: column;
 
     }
+
     .header-content-text {
         margin-left: 20px;
     }
+
     .header-title {
         font-size: 40px;
         font-family: var
     }
-    
+
     .header-subtitle {
         font-size: 20%;
     }
+
     .header-content-text p {
         font-size: 14px;
     }
+
     .btn {
         padding: 10px 30px;
     }
-    .header-img{
+
+    .header-img {
         margin: 50px 10px;
         width: 95%;
         height: 100%;
         max-width: 500px;
     }
 }
-/* end header*/ 
+
+/* end header*/
+
+/* cards section*/
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 15px;
+    margin-top: 70px;
+    padding: 30px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h5 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 15PX;
+}
+
+.card p {
+    text-align: center;
+}
+
+/* end cards section*/
+
+/* products section*/
+
+.products {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+
+}
+
+.products h3 {
+    text-transform: uppercase;
+    font-family: var(--section-product-title);
+    font-size: 40px;
+    color: #090807;
+    line-height: 55px;
+    font-weight: 700;
+    padding: 0;
+    text-transform: uppercase;
+    border-bottom: var(--btn-color) solid 1px;
+    max-width: 315px;
+    margin-bottom: 25px;
+}
+
+
+.products-container {
+    background-color: var(--ligth-color);
+    width: 1100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+    margin-bottom: 100px;
+}
+
+    .products-card {
+        width: 203px;
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
+
+    }
+
+    .products-card a {
+        background-color: var(--products-btn);
+        color: var(--ligth-color);
+        padding: 10px;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+}
+.products-card a:hover{
+    color: var(--ligth-color);
+    background-color: var(--btn-color);
+    border: 2px solid var(--btn-color);
+    transition: all 2s;
+}  
+.btn-secundary{
+    color: var(--btn-color);
+    padding: 15px 60px;
+    border: 2px solid var(--btn-color);
+    text-decoration: none;
+    margin: 0px 5px;
+    font-family: var(--text-font);
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.btn-secundary:hover{
+    background-color: var(--btn-color);
+    color: var(--products-btn);
+    transition: all 2s 
+}
+
+    /* end products section*/
