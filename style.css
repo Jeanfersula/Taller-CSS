@@ -472,7 +472,7 @@ baner {
     align-items: center;
     margin-bottom: 10px;
     padding-top: 70px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     flex-direction: column;
     flex-wrap: wrap;
 }
@@ -506,7 +506,7 @@ baner {
     margin-bottom: 10px;
     width: 100%;
     padding: 10px;
-    }
+}
 
 .textarea {
     background-color: transparent;
@@ -546,6 +546,128 @@ baner {
     background-color: var(--products-btn);
     border: 2px solid var(--products-btn);
     transition: all 2s;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: var(--ligth-color);
+}
+
+textarea::placeholder {
+    color: var(--ligth-color);
+}
+
+
+@media(max-width:800px) {
+    .contact-form {
+        width: 96%;
+    }
+
 }
 
 /* end contact section */
+
+/* footer*/
+
+footer {
+    background-image: url(images/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.social-icons {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    color: var(--ligth-color);
+}
+
+.social-icons a {
+    font-size: 30px;
+    margin: 10px;
+    color: var(--ligth-color);
+}
+
+.copyright {
+    width: 800px;
+    color: var(--ligth-color);
+    border-top: 1px solid var(--ligth-color);
+    margin: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.footer-content {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 25px;
+}
+
+.footer-card {
+    width: 300px;
+    padding: 20px;
+    color: var(--ligth-color);
+}
+
+.footer-card h5 {
+    font-size: 22px;
+}
+
+.footer-card p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.sub-input {
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+
+}
+
+.sub-btn {
+    border-radius: 10px;
+    color: var(--ligth-color);
+    background-color: var(--btn-color);
+    text-decoration: none;
+    padding: 7px 30px;
+    border: 2px solid var(--btn-color);
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.sub-btn:hover {
+    color: var(--ligth-color);
+    background-color: var(--products-btn);
+    border: 2px solid var(--products-btn);
+    transition: all 1s;
+}
+
+.sub-input::placeholder {
+    color: rgb(102, 102, 102);
+    font-size: 20px;
+    font-family: inherit;
+
+}
+
+@media(max-width:800px) {
+    .footer-content {
+        width: 96%;
+    }
+
+    .copyright {
+        width: 96%;
+    }
+}
+
+/* end footer*/
